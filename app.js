@@ -11,8 +11,7 @@ app.use(express.static(publicPath))
 
 // ------- Levantando servidor. 
 
-app.set ("port", process.env.PORT || 3030)
-app.listen (app.get("port"), () => {
+app.listen (("port", process.env.PORT || 3030), () => {
     console.log('Servidor corriendo corriendo correctamente en http://localhost:3030/');
 })  
 
