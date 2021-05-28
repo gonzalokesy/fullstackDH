@@ -1,0 +1,379 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+/* Etiquetas generales */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    width: 100%;
+    margin:auto;
+    background-color: #ebebeb;
+}
+
+
+/* --------------------- Header --------------------- */
+
+.main-header {
+    background-color: #EAC926;
+    border:solid 1px #EAC926;
+}
+
+.header-logo-ml {
+    width: 100%;
+}
+
+.header-logo {
+    width: 70%;
+}
+
+.header-logo img {
+    width: 100%;
+    padding: 20px;
+}
+
+.header-logo-ml form input {
+    display: block;
+    margin: 0 auto 10px;
+    width: 80%;
+}
+
+.copy-header {
+    text-align: center;
+    font-weight: 400;
+    font-size: 100%;
+    margin-bottom: 20px;
+
+}
+
+.header-navbar {
+    display: none;
+}
+
+.header-navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.header-navbar a {
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+    font-weight: 700;
+}
+
+
+.burger-menu {
+    background-color: #03264C;
+    color: white;
+    display: block;
+    text-align: center;
+    width: 50px;
+    padding: 15px 10px;
+    border-radius: 10px;
+    margin: auto;
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+   .main-banner img{
+   width: 100%;
+   max-height: 300px;
+}
+
+
+/* --------------------- Main --------------------- */
+
+main {
+    background-color: #ebebeb;
+}
+
+/* ----- | Formulario de registro | ----- */
+
+/* -- Contenedor principal -- */
+.register-form {
+    width: 90%;
+    margin: 10px auto 0;
+    max-width: 560px;
+    border: solid 1px #666;;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+/* -- Contenedor de secciones -- */
+.register-form-element {
+    width: auto;
+   padding: 0;
+   margin-bottom: 10px;
+   border: none;
+}
+
+.register-form-element label {
+    display: block;
+    color: #666;
+    width: 100%;
+    font-weight: 600;
+    padding: 5px;
+}
+
+.input-user {
+    width: 70%;
+    border-radius: 5px;
+    border: 0.3px solid black;
+    padding: 2px;
+    background-color: white;
+}
+
+/* -- Sección dirección -- */
+
+/* Calle y número */
+.register-form-element-adressAndNumber {
+    width: auto;
+    padding: 0;
+    border: none;
+    margin: 0;
+}
+.register-form-element-adressAndNumber label {
+    width: 100%;
+    font-size: 0.8em;
+    font-weight: normal;
+}
+
+.register-form-element-adressAndNumber input {
+    padding: 1px;
+}
+
+/* Piso y departamento */
+.register-form-element-apartmentAndFlat {
+    display: flex;
+    width: 100%;
+    padding: 0;
+    justify-content: start;
+    border: none;
+}
+
+.register-form-element-apartmentAndFlat label {
+    width: 40%;
+}
+
+.register-form-element-apartmentAndFlat label p {
+    padding: 5px 0;
+   width: 100%;
+   font-size: 0.8em;
+   font-weight: normal;
+}
+
+.register-form-element-apartmentAndFlat input {
+    display: block;
+    width: 40%;
+    padding: 1px;
+}
+
+
+/* RadioButon */
+
+.register-form-element-buyOrSell {
+    padding: 0;
+    border: none;
+}
+
+.register-form-element-buyOrSell label {
+    font-size: 0.8em;
+    font-weight: normal;
+    width: fit-content;
+}
+
+.input-radioButton {
+    margin-right: 5px;
+    width: fit-content;
+    height: fit-content;
+}
+
+/* Checkbox */
+
+.register-form-element-category {
+    padding: 0;
+    border: none;
+}
+
+.register-form-element-category label {
+    font-size: 0.8em;
+    font-weight: normal;
+}
+
+.input-checkbox {
+    margin-right: 5px;
+    width: fit-content;
+    height: fit-content;
+}
+
+.input-filePhoto {
+    width:100%;
+}
+
+
+/* Botones */
+.register-form-buttons {
+    margin-top: 30px;
+    width: 100%;
+    display: flex;
+    justify-content:space-evenly;
+    border: none;
+}
+
+.register-form-buttons button {
+    padding: 3px;
+    background-color: #03264C;
+    color: white;
+    border-radius: 5px;
+    border: solid 1px #666;;
+    border-style: groove;
+}
+
+.register-form-buttons button p {
+    padding: 4px;
+}
+
+
+
+
+/* --------------------- Footer --------------------- */
+
+.box-footer {
+    background-color: #ebebeb;
+    border: #ebebeb solid 1px;
+}
+
+.box-footer-container {
+    margin: auto;
+    background-color: white;
+    width: 95%;
+    margin-top: 20px;
+}
+
+.promocion-footer {
+    text-align: center;
+}
+
+.promocion-footer div i {
+    margin-top: 25px;
+    color: #1259c3;
+    font-size: 25px;
+}
+
+.promocion-footer h3 {
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+
+.promocion-footer p {
+    padding: 0 5px;
+    margin-top: 5px;
+}
+
+#copyright {
+    margin-top: 40px;
+    font-size: 13px;
+}
+
+
+
+/* --------------------- Media queries --------------------- */
+
+@media (min-width: 361px) {
+    .burger-menu {
+        display: none;
+    }
+
+    .header-logo-ml {
+        display: flex;
+        flex-wrap: wrap;
+
+    }
+
+    .header-logo-ml form {
+        width: 40%;
+        align-self: center;
+    }
+
+    .header-logo-ml form input {
+        width: 85%;
+        margin: 0 auto 0;
+        height: 35px;
+
+    }
+
+    .header-logo {
+        width: 30%;
+        align-self: center;
+    }
+    
+    .header-logo img {
+        width: 100%;
+        padding: 10px;
+        margin: 0;
+    }
+
+    .copy-header {
+        align-self: center;
+        font-size: 100%;
+        width: 30%;
+        margin: 0;
+    }
+
+    .header-navbar {
+        display: flex;
+        margin: 20px 0px;
+        justify-content: space-between;
+        width: 100%;
+        flex-wrap: nowrap;
+    }
+
+    .left-navbar {
+        display: flex;
+        width: 50%;
+        justify-content: space-evenly;
+    }
+
+    .left-navbar li a {
+        align-items: center;
+        text-align: center;
+        font-size: 0.5em;
+    }
+
+    .right-navbar {
+        display: flex;
+        width: 45%;
+        justify-content: space-evenly;
+    }
+
+    .right-navbar li a {
+        font-size: 0.5em;
+    }
+}
+    
+@media (min-width: 769px) {
+
+    .header-logo-ml form input {
+        height: 35px;
+    }
+
+    .copy-header {
+        font-size: 1.5em;
+    }
+
+    .header-logo img {
+        width: 100%;
+        padding: 20px;
+    }
+}
+
+
+
+
