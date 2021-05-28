@@ -10,7 +10,9 @@ const publicPath = path.resolve( __dirname, './public');
 app.use(express.static(publicPath))
 
 // ------- Levantando servidor. 
-app.listen (3030, () => {
+
+app.set ("port", process.env.PORT || 3030)
+app.listen (app.get("port"), () => {
     console.log('Servidor corriendo corriendo correctamente en http://localhost:3030/');
 })  
 
