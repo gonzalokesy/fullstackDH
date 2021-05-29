@@ -41,6 +41,7 @@ body {
     width: 60%;
     align-items: center;
     justify-content: center;
+    position: relative;
 }
 
 .navbar__searchbarInput {
@@ -51,6 +52,16 @@ body {
 .button {
     border-style: none;
     background-color: white;
+    border:none;
+    position: absolute;
+    right: 11%;
+    margin: 0;
+    padding:0;
+    border-radius: 5px;
+}
+
+.button__icon {
+    font-size: 100%;
 }
 
 .navbar__bottomConteiner {
@@ -215,15 +226,17 @@ body {
 }
 
 .footer-conteiner {
-    background-color: white;
     width: 90%;
     display: flex;
     flex-direction: column;
     margin: auto;
+    align-items: center;
 }
 
 .box-footer {
     text-align: center;
+    background-color: white;
+
 }
 
 .box-footer__icon {
@@ -237,17 +250,18 @@ body {
 }
 
 .box-footer__text {
-    padding: 0 8px;
+    padding: 8px 0 25px 0;
     margin: 0;
 }
 
-.box-footer--copyright {
-    align-self: flex-start;
+.box-footer__copyright {
+    text-align: left;
 }
 
 .box-footer__title--copyright {
-    margin-top: 40px;
+    margin: 0;
     font-size: 13px;
+    padding: 20px 20px;
 }
 
 
@@ -343,7 +357,7 @@ body {
         display: flex;
         justify-content: space-around;
         margin: 0;
-        padding: 0;
+        padding: 10px 0;
         width: 100%;
     }
 
@@ -394,6 +408,12 @@ body {
 
 
  @media (min-width: 768px) {
+
+    .navbar__searchbarInput {
+        border-radius: 5px;
+        box-shadow: 1px 4px 5px 0px rgba(0,0,0,0.42);
+    }
+
     .box-section {
        max-width: none;
        padding-top: 40px;
@@ -405,7 +425,7 @@ body {
     }
 
     .product__icon {
-        transition: 800ms;
+        transition: 1.5s;
     }
 
     .navbar__logo {
@@ -428,6 +448,10 @@ body {
         font-size: 1vw;
     }
 
+    .box-footer {
+        width: 70%;
+    }
+
    .product:hover {
        transform: scale(1.1);
    }
@@ -440,8 +464,16 @@ body {
     transform: scale(1.1);
    }
 
-   .product__icon:hover {
+   .product:hover > .product__info > .product__icon {
        transform: rotateY(360deg);
+   }
+
+   .box-footer:hover {
+       background-color: rgb(160, 160, 160);
+   }
+
+   .navbar__searchbarInput:focus {
+       outline: none;
    }
 }
 

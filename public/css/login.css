@@ -4,98 +4,118 @@
 /* Etiquetas generales */
 * {
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
 }
 
 body {
     font-family: 'Roboto', sans-serif;
-    width: 100%;
-    margin:auto;
-    background-color: #ebebeb;
+    width: 100vw;
+    padding: 0;
+    margin: 0;
 }
 
 
 /* --------------------- Header --------------------- */
-
-.main-header {
+.header {
     background-color: #EAC926;
-    border:solid 1px #EAC926;
-}
-
-.header-logo-ml {
     width: 100%;
 }
 
-.header-logo {
-    width: 70%;
-}
-
-.header-logo img {
+.navbar__top {
     width: 100%;
-    padding: 20px;
+    display: flex;
+    flex-wrap: wrap; 
 }
 
-.header-logo-ml form input {
-    display: block;
-    margin: 0 auto 10px;
+.navbar__logo {
+    margin: 0;
+    padding: 5px;
+    width: 40%
+}
+
+.navbar__logoImage {
+    width: 100%;
+}
+
+.navbar__searchbar {
+    display: flex;
+    width: 60%;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.navbar__searchbarInput {
     width: 80%;
+    border-style: none;
 }
 
-.copy-header {
-    text-align: center;
-    font-weight: 400;
+.button {
+    border-style: none;
+    background-color: white;
+    border:none;
+    position: absolute;
+    right: 11%;
+    margin: 0;
+    padding:0;
+    border-radius: 5px;
+}
+
+.button__icon {
     font-size: 100%;
-    margin-bottom: 20px;
-
 }
 
-.header-navbar {
+.navbar__bottomConteiner {
     display: none;
 }
 
-.header-navbar ul {
-    list-style: none;
+.button__icon {
+    color: #1259c3 ;
+}
+
+.navbar__copyHeader {
+    width: 100%;
+    padding: 10px 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar__text {
     margin: 0;
     padding: 0;
+    font-size: 15px;
 }
 
-.header-navbar a {
-    text-decoration: none;
-    color: black;
-    display: inline-block;
-    font-weight: 700;
+.navbar__icon {
+    margin-right: 10px;
+    font-size: 15px;
 }
 
-
-.burger-menu {
+.burgerMenu {
     background-color: #03264C;
     color: white;
-    display: block;
-    text-align: center;
-    width: 50px;
-    padding: 15px 10px;
-    border-radius: 10px;
     margin: auto;
-    font-size: 15px;
-    margin-bottom: 20px;
+    border-radius: 10px;
+    margin-bottom: 10px;
 }
 
-   .main-banner img{
-   width: 100%;
-   max-height: 300px;
+.burgerMenu__icon {
+    padding: 10px;
+    font-size: 12px;
 }
+
 
 
 /* --------------------- Main --------------------- */
 
-main {
+.main {
     background-color: #ebebeb;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 /* ----- | Formulario de registro | ----- */
-
 /* Contenedor de formulario */
+
 .login-form {
     display: flex;
     flex-direction: column;
@@ -114,7 +134,7 @@ main {
     border-radius: 5px;
 }
 
-.form-element-login input {
+.form-element-login__input {
     width: 100%;
     background-color: transparent;
     border: none;
@@ -130,157 +150,222 @@ main {
     border:none;
 }
 
-.form-button-login button {
+.form-button-login__button  {
     width: 100%;
     background-color: transparent;
     border: none;
     color: white;
 }
 
-
-
 /* --------------------- Footer --------------------- */
 
-.box-footer {
+.footer {
     background-color: #ebebeb;
-    border: #ebebeb solid 1px;
+    width: 100vw;
+    padding-top: 20px;
 }
 
-.box-footer-container {
+.footer-conteiner {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
     margin: auto;
-    background-color: white;
-    width: 95%;
-    margin-top: 20px;
+    align-items: center;
 }
 
-.promocion-footer {
+.box-footer {
     text-align: center;
+    background-color: white;
 }
 
-.promocion-footer div i {
+.box-footer__icon {
     margin-top: 25px;
     color: #1259c3;
     font-size: 25px;
 }
 
-.promocion-footer h3 {
-    margin-top: 3px;
-    margin-bottom: 3px;
+.box-footer__title {
+    margin: 8px 0;
 }
 
-.promocion-footer p {
-    padding: 0 5px;
-    margin-top: 5px;
+.box-footer__text {
+    padding: 8px 0 25px 0;
+    margin: 0;
 }
 
-#copyright {
-    margin-top: 40px;
+.box-footer__copyright {
+    text-align: left;
+}
+
+.box-footer__title--copyright {
+    margin: 0;
     font-size: 13px;
+    padding: 20px 20px;
 }
 
 
 
 /* --------------------- Media queries --------------------- */
 
-@media (min-width: 361px) {
-    .burger-menu {
-        display: none;
-    }
+ @media (min-width: 361px) {
+    /*Header*/
 
-    .header-logo-ml {
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-    .header-logo-ml form {
-        width: 40%;
-        align-self: center;
-    }
-
-    .header-logo-ml form input {
-        width: 85%;
-        margin: 0 auto 0;
-        height: 35px;
-
-    }
-
-    .header-logo {
-        width: 30%;
-        align-self: center;
-    }
-    
-    .header-logo img {
-        width: 100%;
-        padding: 10px;
-        margin: 0;
-    }
-
-    .copy-header {
-        align-self: center;
-        font-size: 100%;
-        width: 30%;
-        margin: 0;
-    }
-
-    .header-navbar {
-        display: flex;
-        margin: 20px 0px;
+    .navbar__top {
         justify-content: space-between;
-        width: 100%;
-        flex-wrap: nowrap;
-    }
-
-    .left-navbar {
-        display: flex;
-        width: 50%;
-        justify-content: space-evenly;
-    }
-
-    .left-navbar li a {
         align-items: center;
-        text-align: center;
-        font-size: 0.5em;
     }
 
-    .right-navbar {
+    .navbar__logo {
+        width: 30%;
+    }
+
+    .navbar__searchbar {
+        width: 35%;
+    }
+
+    .navbar__copyHeader {
+        width: 25%;
+    }
+
+    .navbar__text {
+        font-size: 10px;
+    }
+
+    .burgerMenu {
+       display: none;
+    }
+
+    .navbar__bottomConteiner {
         display: flex;
-        width: 45%;
-        justify-content: space-evenly;
-    }
-
-    .right-navbar li a {
-        font-size: 0.5em;
-    }
-
-    .form-element-login {
-       width: 60%;
-    }
-
-    .form-button-login {
-        width: 60%;
-    }
-
-    .login-form {
-        max-width: 538px;
-    }
-
-}
-    
-@media (min-width: 769px) {
-
-    .header-logo-ml form input {
-        height: 35px;
-    }
-
-    .copy-header {
-        font-size: 1.5em;
-    }
-
-    .header-logo img {
+        justify-content: space-around;
+        margin: 0;
+        padding: 10px 0;
         width: 100%;
-        padding: 20px;
+    }
+
+    .navbar__bottom {
+        display: flex;
+        list-style: none;
+        justify-content: space-around;
+        width: 100%;
+        margin: 0;
+        padding: 5px 0 5px 0;
+        font-size: 12px;
+    }
+
+    .navbar__bottom--right {
+        justify-content: space-evenly;
+        width: 50%;
+    }
+
+    .navbar__bottom--left {
+        justify-content: space-evenly;
+        width: 68%;
+    }
+    
+    .navbar__bottomLi {
+        padding: 0;
+        margin: 0;
+        text-align: center;
+    }
+
+    .navbar__bottomLi--right {
+        padding:0;
+    }
+
+    .navbar__link {
+        padding: 0;
+        margin: 0;
+        color: black;
+        text-decoration: none;
+        font-size: 10px;
+    }
+
+    .navbar__icon--bottom {
+        margin: 0;
+        font-size: 8px;
+        padding: 0;
     }
 }
+
+
+ @media (min-width: 768px) {
+
+    .navbar__searchbarInput {
+        border-radius: 5px;
+        box-shadow: 1px 4px 5px 0px rgba(0,0,0,0.42);
+    }
+
+    .navbar__logo {
+        max-width: 225px;
+    }
+    
+    .navbar__copyHeader {
+        justify-content: flex-start;
+    }
+
+    .navbar__text {
+        font-size: 1.3vw;
+    }
+
+    .navbar__link {
+        font-size: 1.2vw;
+    }
+
+    .navbar__icon--bottom {
+        font-size: 1vw;
+    }
+
+    .box-footer {
+        width: 70%;
+    }
+
+   .product:hover {
+       transform: scale(1.1);
+   }
+
+   .navbar__link:hover {
+       font-weight: bold;
+   }
+
+   .navbar__bottomLi:hover {
+    transform: scale(1.1);
+   }
+
+   .product:hover > .product__info > .product__icon {
+       transform: rotateY(360deg);
+   }
+
+   .box-footer:hover {
+       background-color: rgb(160, 160, 160);
+   }
+
+   .navbar__searchbarInput:focus {
+       outline: none;
+   }
+
+   .login-form {
+       max-width: 600px;
+   }
+
+   .form-element-login__input:focus {
+       outline: none;
+   }
+   
+   .form-button-login__button:hover {
+        background-color: #03264C;
+    }
+
+    .form-button-login:hover {
+        background-color: #03264C;
+    }
+
+}
+
+
+
+
+
 
 
 

@@ -12,59 +12,59 @@
 
 <body>
 
-    <header class="main-header">
-        <div class="header-logo-ml">
-            <figure class ='header-logo'>
-                <img src = '/images/logo-mercado-liebre.svg' alt = "logo-ml">
-            </figure>
-            <form action="">
-                <input type="text" placeholder="Buscar productos, marcas">
-                <!--<button type="submit">
-                    <i class="fas fa-search"></i>
-                </button>-->
-            </form>
-            <div class="copy-header">
-                <i class="fas fa-hand-holding-usd"></i>
-                Comprá en cuotas y sin interés
+    <header class="header">
+        <nav class = "navbar">
+            <div class="navbar__top">
+                <figure class ='navbar__logo'>
+                    <img class= "navbar__logoImage" src = '/images/logo-mercado-liebre.svg' alt = "logo-ml">
+                </figure>
+                <form class="navbar__searchbar" action="#">
+                    <input class="navbar__searchbarInput" type="text" placeholder="Buscar productos, marcas">
+                    <button class="button" type="submit">
+                        <i class="fas fa-search button__icon"></i>
+                    </button>
+                </form>
+                <div class="navbar__copyHeader">
+                    <i class="fas fa-hand-holding-usd navbar__icon"></i>
+                    <p class="navbar__text">Comprá en cuotas y sin interés</p> 
+                </div>
+                <a href="#" class="burger-menu burgerMenu">
+                    <i class="fas fa-bars burgerMenu__icon"></i>
+                </a>
             </div>
-        </div>
-        <nav class = "header-navbar">
-            <ul class="left-navbar">
-                <li><a href = "">Ofertas</a></li>
-                <li><a href = "">Tiendas oficiales</a></li>
-                <li><a href = "">Vender</a></li>
-                <li><a href = "">Ayuda</a></li>
-            </ul>
-            <ul class="right-navbar">
-                <li><a href = "">Creá tu cuenta <i class="fas fa-id-card"></i></a></li>
-                <li><a href = "">Ingresá <i class="fas fa-sign-in-alt"></i></a></li>
-                <li><a href = "">Mis compras <i class="fas fa-shopping-basket"></i></a></li>
-            </ul>
+            <div class="navbar__bottomConteiner">
+                <ul class="navbar__bottom navbar__bottom--left">
+                    <li class="navbar__bottomLi"><a class="navbar__link" href = "">Ofertas</a></li>
+                    <li class="navbar__bottomLi"><a class="navbar__link" href = "">Tiendas oficiales</a></li>
+                    <li class="navbar__bottomLi"><a class="navbar__link" href = "">Vender</a></li>
+                    <li class="navbar__bottomLi"><a class="navbar__link" href = "">Ayuda</a></li>
+                </ul>
+                <ul class="navbar__bottom navbar__bottom--right">
+                    <li class="navbar__bottomLi navbar__bottomLi--right"><a class="navbar__link" href = "./register">Creá tu cuenta <i class="fas fa-id-card navbar__icon navbar__icon--bottom"></i></a></li>
+                    <li class="navbar__bottomLi navbar__bottomLi--right"><a class="navbar__link" href = "./login">Ingresá <i class="fas fa-sign-in-alt navbar__icon navbar__icon--bottom"></i></a></li>
+                    <li class="navbar__bottomLi navbar__bottomLi--right"><a class="navbar__link" href = "">Mis compras <i class="fas fa-shopping-basket navbar__icon navbar__icon--bottom"></i></a></li>
+                </ul>
+            </div>
         </nav>
-
-        <a href="#" class="burger-menu">
-            <i class="fas fa-bars"></i>
-        </a>
-
     </header>
     
-     <main>
+     <main class="main">
         <form action="./" method="GET" class="login-form" >
 
             <fieldset class="form-element-login">
                 <label for="nombreUsuario">
-                    <input type="text" name="nombreUsuario" id="nombreUsuario" placeholder="Nombre de usuario">
+                    <input class="form-element-login__input" type="text" name="nombreUsuario" id="nombreUsuario" placeholder="Nombre de usuario" required>
                 </label>
             </fieldset>
 
             <fieldset class="form-element-login">
                 <label for="password">
-                    <input type="password" name="password" id="password" placeholder="Contraseña">
+                    <input class="form-element-login__input" type="password" name="password" id="password" placeholder="Contraseña" required>
                 </label>
             </fieldset>
 
             <fieldset class="form-button-login">
-                <button type="submit">
+                <button class="form-button-login__button" type="submit">
                     Ingresá
                 </button>
             </fieldset>
@@ -72,30 +72,29 @@
         </form>
     </main>
 
-    <footer class="box-footer">
-        <div class="box-footer-container">
-            <section class="promocion-footer">
-                <div><i class="fas fa-credit-card"></i></div>
-                <h3>Pagá con tarjeta o en efectivo</h3>
-                <p>Con Mercado Liebre Cash, tenés cuotas sin interés con tarjeta o efectivo en puntos de pago. ¡Y siempre es seguro!</p>
+    <footer class="footer">
+        <div class="footer-conteiner">
+            <section class="box-footer">
+                <div><i class="fas fa-credit-card box-footer__icon"></i></div>
+                <h3 class="box-footer__title">Pagá con tarjeta o en efectivo</h3>
+                <p class="box-footer__text">Con Mercado Liebre Cash, tenés cuotas sin interés con tarjeta o efectivo en puntos de pago. ¡Y siempre es seguro!</p>
             </section>
 
-            <section class="promocion-footer">
-                <div><i class="fas fa-gift"></i></div>
-                <h3>Envío gratis desde $ 2.500</h3>           
-                <p>Solo por estar registrad@ en Mercado Liebre tenés envíos gratis en miles de productos. Es un beneficio de Mercado Puntos.</p>
+            <section class="box-footer">
+                <div><i class="fas fa-gift box-footer__icon"></i></div>
+                <h3 class="box-footer__title">Envío gratis desde $ 2.500</h3>           
+                <p class="box-footer__text">Solo por estar registrad@ en Mercado Liebre tenés envíos gratis en miles de productos. Es un beneficio de Mercado Puntos.</p>
             </section>
 
-            <section class="promocion-footer">
-                <div><i class="fas fa-user-shield"></i></div>
-                <h3>Seguridad, de principio a fin</h3>
-                <p>¿No te gusta? ¡Devolvelo! En Mercado Liebre, no hay nada que no puedas hacer, porque estás siempre protegid@</p>
+            <section class="box-footer">
+                <div><i class="fas fa-user-shield box-footer__icon"></i></div>
+                <h3 class="box-footer__title">Seguridad, de principio a fin</h3>
+                <p class="box-footer__text">¿No te gusta? ¡Devolvelo! En Mercado Liebre, no hay nada que no puedas hacer, porque estás siempre protegid@</p>
             </section>
-
-            <section id = "copyright">
-                <h4>Copyright © 1999 - 2020 MercadoLiebre S.R.L</h4>
-            </section>
-         </div>  
+        </div> 
+        <section class="box-footer__copyright">
+            <h4 class="box-footer__title box-footer__title--copyright">Copyright © 1999 - 2020 MercadoLiebre S.R.L</h4>
+        </section> 
     </footer>
 
 </body>
