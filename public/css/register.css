@@ -116,7 +116,7 @@ body {
 /* ----- | Formulario de registro | ----- */
 
 /* -- Contenedor principal -- */
-.register-form {
+.registerForm {
     width: 90%;
     margin: 10px auto 0;
     max-width: 560px;
@@ -127,138 +127,68 @@ body {
 }
 
 /* -- Contenedor de secciones -- */
-.register-form-element {
-    width: auto;
-   padding: 0;
-   margin-bottom: 10px;
-   border: none;
-}
-
-.register-form-element label {
-    display: block;
-    color: #666;
+.registerForm__element {
+    display: flex;
+    flex-wrap: wrap;
     width: 100%;
-    font-weight: 600;
-    padding: 5px;
+    padding: 10px 0 0 0;
+    border: transparent;
 }
 
-.input-user {
-    width: 70%;
-    border-radius: 5px;
-    border: 0.3px solid black;
-    padding: 2px;
-    background-color: white;
+.registerForm__elementLabel {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 50%;
+    padding: 10px 0;
 }
 
-/* -- Sección dirección -- */
+.registerForm__elementLabel--radio {
+    flex-direction: row;
+    width: 100%;
+}
 
-/* Calle y número */
-.register-form-element-adressAndNumber {
-    width: auto;
-    padding: 0;
-    border: none;
+.registerForm__elementLabel--width {
+    width: 100%;
+    align-items: flex-start;  
+}
+
+.registerForm__elementP {
+    display: block;
+    padding: 1px;
     margin: 0;
-}
-.register-form-element-adressAndNumber label {
-    width: 100%;
-    font-size: 0.8em;
-    font-weight: normal;
+    width: 80%;
+    font-size: 15px;
+    text-align: left;
 }
 
-.register-form-element-adressAndNumber input {
-    padding: 1px;
+.registerForm__elementInputRadio {
+    margin-right: 10px;
 }
 
-/* Piso y departamento */
-.register-form-element-apartmentAndFlat {
+.registerForm__elementInput {
+    width: 80%;
+    border-style: none;
+    padding: 8px;
+    background-color: transparent;
+    border-bottom: solid 0.5px rgb(148, 148, 148);
+}
+
+.registerForm__boxButtons {
+    width: 50%;
     display: flex;
-    width: 100%;
-    padding: 0;
-    justify-content: start;
-    border: none;
+    justify-content: space-around;
+    margin: auto;
+    border:none;
 }
 
-.register-form-element-apartmentAndFlat label {
-    width: 40%;
-}
-
-.register-form-element-apartmentAndFlat label p {
-    padding: 5px 0;
-   width: 100%;
-   font-size: 0.8em;
-   font-weight: normal;
-}
-
-.register-form-element-apartmentAndFlat input {
-    display: block;
-    width: 40%;
-    padding: 1px;
-}
-
-
-/* RadioButon */
-
-.register-form-element-buyOrSell {
-    padding: 0;
-    border: none;
-}
-
-.register-form-element-buyOrSell label {
-    font-size: 0.8em;
-    font-weight: normal;
-    width: fit-content;
-}
-
-.input-radioButton {
-    margin-right: 5px;
-    width: fit-content;
-    height: fit-content;
-}
-
-/* Checkbox */
-
-.register-form-element-category {
-    padding: 0;
-    border: none;
-}
-
-.register-form-element-category label {
-    font-size: 0.8em;
-    font-weight: normal;
-}
-
-.input-checkbox {
-    margin-right: 5px;
-    width: fit-content;
-    height: fit-content;
-}
-
-.input-filePhoto {
-    width:100%;
-}
-
-
-/* Botones */
-.register-form-buttons {
-    margin-top: 30px;
-    width: 100%;
-    display: flex;
-    justify-content:space-evenly;
-    border: none;
-}
-
-.register-form-buttons button {
-    padding: 3px;
-    background-color: #03264C;
+.registerForm__button {
+    background-color: #03264C ;
     color: white;
-    border-radius: 5px;
-    border: solid 1px #666;;
-    border-style: groove;
+    padding: 5px 8px;
+    border-style: none;
 }
 
-.register-form-buttons button p {
-    padding: 4px;
-}
 
 
 
@@ -449,164 +379,23 @@ body {
        outline: none;
    }
 
+   .registerForm__elementInput:focus {
+    outline: none;
+    border-bottom: 3px solid black;
+}
+
+.registerForm__elementInput:hover {
+    border-bottom: 3px solid black;
+}
+
+.registerForm__button:hover {
+    background-color: #1259c3 ;
+}
+
 }
 
 
 
-
-
-
-
-
-/* --------------------- Main --------------------- */
-
-
-/* ----- | Formulario de registro | ----- */
-
-/* -- Contenedor principal -- */
-.register-form {
-    width: 90%;
-    margin: 10px auto 0;
-    max-width: 560px;
-    border: solid 1px #666;;
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
-}
-
-/* -- Contenedor de secciones -- */
-.register-form-element {
-    width: auto;
-   padding: 0;
-   margin-bottom: 10px;
-   border: none;
-}
-
-.register-form-element label {
-    display: block;
-    color: #666;
-    width: 100%;
-    font-weight: 600;
-    padding: 5px;
-}
-
-.input-user {
-    width: 70%;
-    border-radius: 5px;
-    border: 0.3px solid black;
-    padding: 2px;
-    background-color: white;
-}
-
-/* -- Sección dirección -- */
-
-/* Calle y número */
-.register-form-element-adressAndNumber {
-    width: auto;
-    padding: 0;
-    border: none;
-    margin: 0;
-}
-.register-form-element-adressAndNumber label {
-    width: 100%;
-    font-size: 0.8em;
-    font-weight: normal;
-}
-
-.register-form-element-adressAndNumber input {
-    padding: 1px;
-}
-
-/* Piso y departamento */
-.register-form-element-apartmentAndFlat {
-    display: flex;
-    width: 100%;
-    padding: 0;
-    justify-content: start;
-    border: none;
-}
-
-.register-form-element-apartmentAndFlat label {
-    width: 40%;
-}
-
-.register-form-element-apartmentAndFlat label p {
-    padding: 5px 0;
-   width: 100%;
-   font-size: 0.8em;
-   font-weight: normal;
-}
-
-.register-form-element-apartmentAndFlat input {
-    display: block;
-    width: 40%;
-    padding: 1px;
-}
-
-
-/* RadioButon */
-
-.register-form-element-buyOrSell {
-    padding: 0;
-    border: none;
-}
-
-.register-form-element-buyOrSell label {
-    font-size: 0.8em;
-    font-weight: normal;
-    width: fit-content;
-}
-
-.input-radioButton {
-    margin-right: 5px;
-    width: fit-content;
-    height: fit-content;
-}
-
-/* Checkbox */
-
-.register-form-element-category {
-    padding: 0;
-    border: none;
-}
-
-.register-form-element-category label {
-    font-size: 0.8em;
-    font-weight: normal;
-}
-
-.input-checkbox {
-    margin-right: 5px;
-    width: fit-content;
-    height: fit-content;
-}
-
-.input-filePhoto {
-    width:100%;
-}
-
-
-/* Botones */
-.register-form-buttons {
-    margin-top: 30px;
-    width: 100%;
-    display: flex;
-    justify-content:space-evenly;
-    border: none;
-}
-
-.register-form-buttons button {
-    padding: 3px;
-    background-color: #03264C;
-    color: white;
-    border-radius: 5px;
-    border: solid 1px #666;;
-    border-style: groove;
-}
-
-.register-form-buttons button p {
-    padding: 4px;
-}
 
 
 

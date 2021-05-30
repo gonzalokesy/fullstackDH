@@ -146,7 +146,7 @@ body {
     width: 70%;
     padding: 5px;
     border-radius: 5px;
-    background-color: #1259c3; ;
+    background-color: #03264C ;
     border:none;
 }
 
@@ -353,11 +353,11 @@ body {
    }
    
    .form-button-login__button:hover {
-        background-color: #03264C;
+        background-color: #1259c3;
     }
 
     .form-button-login:hover {
-        background-color: #03264C;
+        background-color: #1259c3;
     }
 
 }

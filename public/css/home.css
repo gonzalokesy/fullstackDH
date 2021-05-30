@@ -428,6 +428,10 @@ body {
         transition: 1.5s;
     }
 
+    .product__description {
+        visibility: hidden;
+    }
+
     .navbar__logo {
         max-width: 225px;
     }
@@ -474,6 +478,10 @@ body {
 
    .navbar__searchbarInput:focus {
        outline: none;
+   }
+
+   .product:hover > .product__info > .product__description {
+        visibility:visible;
    }
 }
 

@@ -49,136 +49,115 @@
     </header>
     
      <main class="main">
-        <form action="./" method="GET" class="register-form" >
-            <!----------- | Nombre | -------------->
-            <fieldset class="register-form-element">
-                <label for="nombre">
-                    Nombre:
-                </label> 
-                <input class="input-user" type="text" name="nombre" id="nombre" placeholder="Ingresá tu nombre">
-            </fieldset>
-            <!----------- | Apellido | ------------>
-            <fieldset class="register-form-element">
-                <label for="apellido">
-                    Apellido:
+        <form action="./" method="GET" class="registerForm" >
+            <!-----------Nombre y Apellido------------>
+            <fieldset class="registerForm__element">
+                <label class="registerForm__elementLabel" for="nombre">
+                    <p class="registerForm__elementP">Nombre</p> 
+                    <input class="registerForm__elementInput" type="text" name="nombre" id="nombre" required>
                 </label>
-                <input class="input-user" type="text" name="apellido" id="apellido" placeholder="Ingresá tu apellido">
-            </fieldset>
-            <!----------- | Username | ------------>
-            <fieldset class="register-form-element">
-                <label for="user-name">
-                    Nombre de usuario:
+                <label class="registerForm__elementLabel" for="apellido">
+                    <p class="registerForm__elementP">Apellido</p> 
+                    <input class="registerForm__elementInput" type="text" name="apellido" id="apellido" required>
                 </label>
-                <input class="input-user" type="text" name="user-name" id="user-name" placeholder="Ingresá tu nombre de usuario" required minlength="5">
             </fieldset>
-            <!------- | Fecha de nacimiento | ----->
-            <fieldset class="register-form-element">
-                <label for="fecha-nacimiento">
-                    Fecha de nacimiento:
+            <!--Username, contraseña-->
+            <fieldset class="registerForm__element">
+                <label class="registerForm__elementLabel registerForm__elementLabel--width" for="nombreDeUsuario">
+                    <p class="registerForm__elementP">Nombre de usuario</p> 
+                    <input class="registerForm__elementInput" type="text" name="nombreDeUsuario" id="nombreDeUsuario"required minlength="5">
                 </label>
-                <input class="input-user" type="date" name="fecha-nacimiento" id="fecha-nacimiento">
+                <label class="registerForm__elementLabel " for="contraseña">
+                    <p class="registerForm__elementP">Contraseña</p> 
+                    <input class="registerForm__elementInput" type="password" name="contraseña" id="contraseña">
+                </label>
+                <label class="registerForm__elementLabel " for="contraseña2">
+                    <p class="registerForm__elementP">Confirmá contraseña</p> 
+                    <input class="registerForm__elementInput" type="password" name="contraseña2" id="contraseña2">
+                </label>
+            <!--Fecha de nacimiento-->
             </fieldset>
-            <!----------- | Domicilio | ------------>
-            <fieldset class="register-form-element">
-                <label>
-                    Domicilio
+            <fieldset class="registerForm__element">
+                <label class="registerForm__elementLabel registerForm__elementLabel--width" for="fechaNacimiento">
+                    <p class="registerForm__elementP">Fecha de nacimiento</p> 
+                    <input class="registerForm__elementInput" type="date" name="fechaNacimiento" id="fechaNacimiento" required>
                 </label>
-                    <fieldset class="register-form-element-adressAndNumber">
-                        <label for="calle">
-                            Calle
-                        </label>
-                        <input class="input-user" type="text" name="calle" id="calle">
-                        <label for="numero">
-                            Número
-                        </label>
-                        <input class="input-user" type="text" name="numero" id="numero">
-                    </fieldset>
-                    <fieldset class="register-form-element-apartmentAndFlat">
-                        <label for="piso">
-                            <p>Piso</p>
-                            <input class="input-user" type="text" name="piso" id="piso">
-                        </label>
-                        <label for="departamento">
-                            <p>Departamento</p>
-                            <input class="input-user" type="text" name="departamento" id="departamento"> 
-                        </label>     
-                    </fieldset>
+            </fieldset>
+            <!-- Foto de perfil -->
+            <fieldset class="registerForm__element">
+                <label class="registerForm__elementLabel registerForm__elementLabel--width" for="profilephoto">
+                    <p class="registerForm__elementP">Seleccioná tu foto de perfil</p> 
+                    <input class="registerForm__elementInput" type="file" name="profilephoto" id="profilephoto" accept=".jpg, .png">
+                </label>
+            </fieldset>
+            <!-- Domicilio -->
+            <fieldset class="registerForm__element">
+                <label class="registerForm__elementLabel registerForm__elementLabel--width" for="domicilio">
+                    <p class="registerForm__elementP">Domicilio</p>
+                </label>
+                <label class="registerForm__elementLabel" for="calle">
+                    <p class="registerForm__elementP">Calle</p> 
+                    <input class="registerForm__elementInput" type="text" name="calle" id="calle" required>
+                </label>
+                <label class="registerForm__elementLabel" for="numero">
+                    <p class="registerForm__elementP">Número</p> 
+                    <input class="registerForm__elementInput" type="text" name="numero" id="numero" required>
+                </label>
+                <label class="registerForm__elementLabel" for="departamentoo">
+                    <p class="registerForm__elementP">Departamento</p> 
+                    <input class="registerForm__elementInput" type="text" name="departamento" id="departamento">
+                </label>
+                <label class="registerForm__elementLabel" for="piso">
+                    <p class="registerForm__elementP">Piso</p> 
+                    <input class="registerForm__elementInput" type="text" name="piso" id="piso">
+                </label>
             </fieldset>
             <!----------- | RadioButon | ------------>
-             <fieldset class="register-form-element">
-                <label>
-                    Voy a utilizar mi cuenta para:
+            <fieldset class="registerForm__element">
+                <label class="registerForm__elementLabel  registerForm__elementLabel--width" for="perfilDeCuenta">
+                    <p class="registerForm__elementP">Perfil de cuenta</p>
                 </label>
-                    <fieldset class="register-form-element-buyOrSell">
-                        <label for="compra">
-                            <input class="input-radioButton" type="radio" name="buyOrSell" id="compra" value="compra" checked>
-                            Compra
-                        </label>
-                        <label for="venta">
-                            <input class="input-radioButton" type="radio" name="buyOrSell" id="venta" value="venta">
-                            Venta
-                        </label>
-                    </fieldset>       
-            </fieldset>
-            <!----------- | Checkbox | ------------>
-            <fieldset class="register-form-element">
-                <label>
-                    Categorias de interés:
+                <label class="registerForm__elementLabel registerForm__elementLabel--radio" for="vendedor">
+                    <input class="registerForm__elementInputRadio" type="radio" name="compraOvende" id="vendedor" value="vende" checked>
+                    Vendedor
                 </label>
-                    <fieldset class="register-form-element-category">
-                        <label for="electro">
-                            <input class="input-checkbox" type="checkbox" name="category" id="electro" value="electro">
-                            Electro
-                        </label>
-                        <label for="moda">
-                            <input class="input-checkbox" type="checkbox" name="category" id="moda" value="moda">  
-                            Moda
-                        </label>
-                        <label for="hogar">
-                            <input class="input-checkbox" type="checkbox" name="category" id="hogar" value="hogar">
-                            Hogar   
-                        </label>
-                        <label for="jugueteria">
-                            <input class="input-checkbox" type="checkbox" name="category" id="jugueteria" value="jugueteria">
-                            Jugueteria
-                        </label>    
-                        <label for="vida-sana">
-                            <input class="input-checkbox" type="checkbox" name="category" id="vida-sana" value="vida-sana">
-                            Vida sana
-                        </label>        
-                    </fieldset>   
-            </fieldset>
-            <!----------- | Foto | ------------>
-            <fieldset class="register-form-element">
-                <label>
-                    Seleccioná tu foto de foto de perfil:
+                <label class="registerForm__elementLabel registerForm__elementLabel--radio" for="comprador">
+                    <input class="registerForm__elementInputRadio" type="radio" name="compraOvende" id="comprador" value="compra">
+                    Comprador
                 </label>
-                <input class="input-filePhoto" type="file" name="foto-perfil" accept=".jpg, .png" >
-            </fieldset>
-            <!----------- | Contraseña | ------------>
-            <fieldset class="register-form-element">
-                <label for="password">
-                    Contraseña:
+                <!----------- | Checkbox | ------------>
+                <label class="registerForm__elementLabel  registerForm__elementLabel--width" for="perfilDeCuenta">
+                    <p class="registerForm__elementP">Indicá tus intereses y/o preferencias</p>
                 </label>
-                <input class="input-user" type="password" name="password" id="password" placeholder="Ingresá tu contraseña" required>
-            </fieldset>
-            <!----------- | Contraseña2 | ------------>
-            <fieldset class="register-form-element">
-                <label for="confirm-password">
-                    Confirmar contraseña:
+                <label class="registerForm__elementLabel registerForm__elementLabel--radio" for="electro">
+                    <input class="registerForm__elementInputRadio" type="checkbox" name="categoria" id="electro" value="electro">
+                    Electro
                 </label>
-                <input class="input-user" type="password" name="confirm-password" id="confirm-password" placeholder="Confirmá tu contraseña" required>
+                <label class="registerForm__elementLabel registerForm__elementLabel--radio" for="moda">
+                    <input class="registerForm__elementInputRadio" type="checkbox" name="categoria" id="moda" value="electro">
+                    Moda
+                </label>
+                <label class="registerForm__elementLabel registerForm__elementLabel--radio" for="hogar">
+                    <input class="registerForm__elementInputRadio" type="checkbox" name="categoria" id="hogar" value="hogar">
+                    Hogar
+                </label>
+                <label class="registerForm__elementLabel registerForm__elementLabel--radio" for="jugueteria">
+                    <input class="registerForm__elementInputRadio" type="checkbox" name="categoria" id="jugueteria" value="jugueteria">
+                    Jugueteria
+                </label>
+                <label class="registerForm__elementLabel registerForm__elementLabel--radio" for="vidaSana">
+                    <input class="registerForm__elementInputRadio" type="checkbox" name="categoria" id="vidaSana" value="vidaSana">
+                    Vida Sana
+                </label>
             </fieldset>
-            <!----------- | Botones | ------------>
-            <fieldset class="register-form-buttons">
-                <button type="submit">
-                    <p>Enviar</p> 
+            <fieldset class="registerForm__boxButtons">
+                <button class="registerForm__button" type="submit">
+                    Enviar 
                 </button>
-                <button type="reset">
-                    <p>Borrar</p> 
+                <button class="registerForm__button" type="reset">
+                    Borrar 
                 </button>
             </fieldset>
-
         </form>
     </main>
 
